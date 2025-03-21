@@ -150,7 +150,9 @@ function trackVideoDetails(videoDigitalData, videoIframe, interactionType) {
   if (videoIframe.dataset.action === 'replay') videoIframe.dataset.highestPlayback = '0';
   videoDigitalData.page.video.length = videoIframe.dataset.length;
   const percent = Math.floor(
-    (videoIframe.dataset.highestPlayback * 100) / Math.floor(videoIframe.dataset.length) + 0.01,
+    (videoIframe.dataset.highestPlayback * 100)
+    / Math.floor(videoIframe.dataset.length)
+    + 0.01,
   );
   videoDigitalData.page.video.milestone = (Math.floor(percent / 25 + 0.01) * 25).toString();
   if (interactionType.includes('video-milestone')) {
@@ -347,7 +349,10 @@ export function trackInteraction(element, overrides = {}) {
       } else {
         interactionType.push('accordion-close');
       }
-    } else if (element.classList.contains('carousel-nav-button') || element.classList.contains('carousel-dot-button')) {
+    } else if (
+      element.classList.contains('carousel-nav-button')
+      || element.classList.contains('carousel-dot-button')
+    ) {
       interactionType.push('carousel');
 
       if (element.classList.contains('carousel-nav-right')) {
@@ -439,9 +444,9 @@ export function trackInteraction(element, overrides = {}) {
       }
 
       if (interactionDigitalData.page.component.title === '') {
-        const linkTitle = interactionDigitalData.page.link.displayTitle;
-        interactionDigitalData.page.component.title = linkTitle;
-        interactionDigitalData.page.component.l10title = linkTitle;
+        interactionDigitalData.page.component.title = interactionDigitalData.page.link.displayTitle;
+        // eslint-disable-next-line max-len
+        interactionDigitalData.page.component.l10title = interactionDigitalData.page.link.displayTitle;
       }
 
       interactionDigitalData.page.link.name = interactionDigitalData.page.link.displayTitle;

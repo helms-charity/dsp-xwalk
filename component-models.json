@@ -190,5 +190,17 @@
         "valueType": "string"
       }
     ]
-  }
+  },
+  {
+    "id": "isi",
+    "fields": [
+       {
+         "component": "richtext",
+         "name": "isi",
+         "value": "",
+         "label": "ISI",
+         "valueType": "string"
+       }
+     ]
+  }  
 ]
