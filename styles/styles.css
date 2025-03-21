@@ -235,7 +235,7 @@
 }
 
 /* tablet break point */
-@media (min-width: 768px) {
+@media (width >= 768px) {
   :root {
     --heading-font-size-xxl: 32px;
     --heading-font-size-xl: 24px;
@@ -257,7 +257,7 @@
 }
 
 /* laptop break point */
-@media (min-width: 992px) {
+@media (width >= 992px) {
   :root {
     --nav-height: var(--nav-height-laptop);
     --scroll-animation-height: 554px;
@@ -275,7 +275,7 @@
 }
 
 /* desktop break point */
-@media (min-width: 1200px) {
+@media (width >= 1200px) {
   :root {
     --nav-height: var(--nav-height-desktop);
   }
@@ -292,7 +292,7 @@
 }
 
 /* hd break point */
-@media (min-width: 1366px) {
+@media (width >= 1366px) {
   :root {
     --nav-height: var(--nav-height-hd);
   }
@@ -317,7 +317,7 @@ body {
   display: none;
 }
 
-@media (min-width: 768px) {
+@media (width >= 768px) {
   body {
     font-size: var(--body-font-size-m);
   }
@@ -374,7 +374,7 @@ h4 {
   font-weight: 700;
 }
 
-@media (min-width: 768px) {
+@media (width >= 768px) {
   h4 {
     line-height: 1;
   }
@@ -387,7 +387,7 @@ h5 {
   font-weight: 500;
 }
 
-@media (min-width: 768px) {
+@media (width >= 768px) {
   h5 {
     line-height: 1.33;
   }
@@ -478,6 +478,7 @@ a:hover {
 }
 
 /* buttons */
+/* stylelint-disable selector-class-pattern */
 a.button:any-link,
 button:where(:not(.results__map *)) {
   font-family: var(--body-font-family);
@@ -624,7 +625,7 @@ main .section.carousel-container:first-of-type > div {
 }
 
 /* tablet break point */
-@media (min-width: 768px) {
+@media (width >= 768px) {
   main .section > div,
   main .section.green-box.carousel-container {
     width: 90%;
@@ -647,7 +648,7 @@ main .section-divider {
   margin-bottom: -16px;
 }
 
-@media (min-width: 768px) {
+@media (width >= 768px) {
   main .section-divider {
     margin-top: -24px;
     margin-bottom: -18px;
@@ -709,7 +710,7 @@ main .about-durysta li::marker {
   color: var(--list-marker-color);
 }
 
-@media (min-width: 768px) {
+@media (width >= 768px) {
   main .about-durysta ul {
     margin-top: 30px;
   }
@@ -732,8 +733,7 @@ main .modal-container {
   width: 100%;
   height: 100%;
   z-index: 1000;
-  overflow-x: hidden;
-  overflow-y: auto;
+  overflow: hidden auto; /* Combines overflow-x: hidden and overflow-y: auto */
   background-color: var(--modal-container-background-color);
 }
 
@@ -907,7 +907,6 @@ main .video-wrap {
   height: auto;
   width: var(--video-width);
   width: 100%;
-  padding: 76px 30px 65px;
   padding: 60px 25px 65px;
 }
 
@@ -967,7 +966,7 @@ main .video-modal.fade-out {
 }
 
 /* tablet break point */
-@media (min-width: 768px) {
+@media (width >= 768px) {
   :root {
     --video-width: 580px;
     --video-translate-y: 3%;
@@ -1019,7 +1018,7 @@ main .video-modal.fade-out {
   }
 }
 
-@media (min-width: 992px) {
+@media (width >= 992px) {
   :root {
     --video-width: 780px;
   }
@@ -1035,7 +1034,7 @@ main .video-modal.fade-out {
 }
 
 /* desktop break point */
-@media (min-width: 1200px) {
+@media (width >= 1200px) {
   :root {
     --video-translate-y: 4%;
   }
@@ -1068,7 +1067,7 @@ main .video-modal.fade-out {
   line-height: 24px;
 }
 
-@media (min-width: 768px) {
+@media (width >= 768px) {
   .section.error {
     margin-top: 0;
   }
@@ -1078,7 +1077,7 @@ main .video-modal.fade-out {
   }
 }
 
-@media (min-width: 992px) {
+@media (width >= 992px) {
   .section.error {
     margin: 31px 0 0;
   }
@@ -1092,7 +1091,7 @@ main .video-modal.fade-out {
   }
 }
 
-@media (min-width: 1200px) {
+@media (width >= 1200px) {
   main .section.error > div {
     max-width: var(--content-max-width);
     min-height: 220px;
