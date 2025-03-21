@@ -1,4 +1,4 @@
-import { loadScript } from './lib-franklin.js';
+import { loadScript } from './aem.js';
 
 const defaultDigitalData = {
   page: {
@@ -72,6 +72,7 @@ const deepCopy = (obj) => JSON.parse(JSON.stringify(obj));
 let allInteractionData = {};
 let allInteractionTypeData = {};
 
+/* stylelint-disable max-len */
 export function getInteractionData(matcher, matchMultiple = false, dataSource = allInteractionData) {
   let result = {};
   dataSource.forEach((d) => {
@@ -138,8 +139,8 @@ function trackVideoDetails(videoDigitalData, videoIframe, interactionType) {
   videoDigitalData.page.link.url = videoIframe.getAttribute('src');
   videoDigitalData.page.video.playback = videoIframe.dataset.playback;
   if (
-    !videoIframe.dataset.highestPlayback ||
-    videoIframe.dataset.highestPlayback * 1 < videoIframe.dataset.playback * 1
+    !videoIframe.dataset.highestPlayback
+    || videoIframe.dataset.highestPlayback * 1 < videoIframe.dataset.playback * 1
   ) {
     videoIframe.dataset.highestPlayback = videoIframe.dataset.playback;
   }
@@ -283,10 +284,10 @@ export function trackInteraction(element, overrides = {}) {
       interactionType.push('link');
       const link = element.closest('a');
       if (
-        link.origin === window.location.origin &&
-        link.pathname === window.location.pathname &&
-        link.hash === '#0' &&
-        link.querySelector('.video-thumbnail') !== null
+        link.origin === window.location.origin
+        && link.pathname === window.location.pathname
+        && link.hash === '#0'
+        && link.querySelector('.video-thumbnail') !== null
       ) {
         return;
       }
@@ -308,9 +309,9 @@ export function trackInteraction(element, overrides = {}) {
       }
 
       if (
-        link.classList.contains('results__item-address-phone') ||
-        link.classList.contains('results__item-address-directions') ||
-        link.classList.contains('results__item-address-website')
+        link.classList.contains('results__item-address-phone')
+        && link.classList.contains('results__item-address-directions')
+        && link.classList.contains('results__item-address-website')
       ) {
         interactionType.push('link-doctor-locator');
       }
@@ -343,7 +344,10 @@ export function trackInteraction(element, overrides = {}) {
       } else {
         interactionType.push('accordion-close');
       }
-    } else if (element.classList.contains('carousel-nav-button') || element.classList.contains('carousel-dot-button')) {
+    } else if (
+      element.classList.contains('carousel-nav-button')
+      || element.classList.contains('carousel-dot-button')
+    ) {
       interactionType.push('carousel');
 
       if (element.classList.contains('carousel-nav-right')) {
@@ -434,6 +438,7 @@ export function trackInteraction(element, overrides = {}) {
         interactionDigitalData.page.link.displayTitle = element.getAttribute('aria-label');
       }
 
+      /* stylelint-disable max-len */
       if (interactionDigitalData.page.component.title === '') {
         interactionDigitalData.page.component.title = interactionDigitalData.page.link.displayTitle;
         interactionDigitalData.page.component.l10title = interactionDigitalData.page.link.displayTitle;
