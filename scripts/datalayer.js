@@ -315,8 +315,8 @@ export function trackInteraction(element, overrides = {}) {
 
       if (
         link.classList.contains('results__item-address-phone')
-        && link.classList.contains('results__item-address-directions')
-        && link.classList.contains('results__item-address-website')
+        || link.classList.contains('results__item-address-directions')
+        || link.classList.contains('results__item-address-website')
       ) {
         interactionType.push('link-doctor-locator');
       }
