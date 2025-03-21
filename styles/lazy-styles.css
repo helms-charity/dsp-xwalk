@@ -1,1 +1,77 @@
-/* add global styles that can be loaded post LCP here */
+/* below the fold CSS goes here */
+
+/* || ITC Avant Fonts */
+
+@font-face {
+    font-family: 'ITCAvantGardeGothicW01-Demi';
+    src: url('../fonts/ITCAvantGardeGothicW01-Demi.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ITCAvantGardeGothicW01-Book';
+    src: url('../fonts/ITCAvantGardeGothicW01-Book.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ITCAvantGardeGothicW01';
+    src: url('../fonts/ITCAvantGardeGothicW01-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ITCAvantGardeGothicW01-MdObl';
+    src: url('../fonts/ITCAvantGardeGothicW01-MdObl.woff2') format('woff2');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ITCAvantGardeGothicW01-Md';
+    src: url('../fonts/ITCAvantGardeGothicW01-Md.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ITCAvantGardeGothicW01-DmObl';  
+    src: url('../fonts/ITCAvantGardeGothicW01-DmObl.woff2') format('woff2');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face{
+    font-family:"ITCAvantGardeGothicW01-Dm";
+    src:url("../fonts/ITCAvantGardeGothicW01-Dm.woff2") format('woff2');
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+}
+
+@font-face{
+    font-family:"ITCAvantGardeGothicW01-Bd";
+    src:url("../fonts/ITCAvantGardeGothicW01-Bd.woff2") format('woff2');
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+}
+
+/* || Felt Tip Roman Fonts */
+
+@font-face {
+    font-family: 'FeltTipRomanW01-Reg';
+    src:  url('../fonts/FeltTipRomanW01-Reg.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
