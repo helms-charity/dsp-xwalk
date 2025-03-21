@@ -23,17 +23,17 @@
  * @param {Object} attrs            - attributes object
  */
 export default function setAttributes(el, attrs) {
-    if (!(el instanceof Element || el instanceof HTMLElement)) return;
-  
-    Object.entries(attrs).forEach(([key, value]) => {
-      if (typeof value === 'object') {
-        Object.entries(value).forEach(([innerKey, innerValue]) => {
-          el[key][innerKey] = innerValue;
-        });
-      } else if (key.startsWith('on')) {
-        el.addEventListener(key.substring(2).toLowerCase(), value);
-      } else {
-        el.setAttribute(key, value);
-      }
-    });
-  }
+  if (!(el instanceof Element || el instanceof HTMLElement)) return;
+
+  Object.entries(attrs).forEach(([key, value]) => {
+    if (typeof value === 'object') {
+      Object.entries(value).forEach(([innerKey, innerValue]) => {
+        el[key][innerKey] = innerValue;
+      });
+    } else if (key.startsWith('on')) {
+      el.addEventListener(key.substring(2).toLowerCase(), value);
+    } else {
+      el.setAttribute(key, value);
+    }
+  });
+}
