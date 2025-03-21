@@ -72,7 +72,11 @@ const deepCopy = (obj) => JSON.parse(JSON.stringify(obj));
 let allInteractionData = {};
 let allInteractionTypeData = {};
 
-export function getInteractionData(matcher, matchMultiple = false, dataSource = allInteractionData) {
+export function getInteractionData(
+  matcher,
+  matchMultiple = false,
+  dataSource = allInteractionData,
+) {
   let result = {};
   dataSource.forEach((d) => {
     let isMatch = true;
@@ -83,9 +87,7 @@ export function getInteractionData(matcher, matchMultiple = false, dataSource = 
         if (keys.length === 1) {
           const matcherValue = matcher[key];
           if (Array.isArray(matcherValue)) {
-            const isArrayMatch = value.split(',').every((x) =>
-              matcherValue.includes(x)
-            );
+            const isArrayMatch = value.split(',').every((x) => matcherValue.includes(x));
             isMatch = isMatch && isArrayMatch;
           } else if (key === 'url' && matcherValue !== undefined && matcherValue !== null && matcherValue !== '') {
             isMatch = isMatch && matcherValue.split('?')[0] === value.split('?')[0];
@@ -148,9 +150,9 @@ function trackVideoDetails(videoDigitalData, videoIframe, interactionType) {
   if (videoIframe.dataset.action === 'replay') videoIframe.dataset.highestPlayback = '0';
   videoDigitalData.page.video.length = videoIframe.dataset.length;
   const percent = Math.floor(
-    (videoIframe.dataset.highestPlayback * 100) /
-      Math.floor(videoIframe.dataset.length) +
-      0.01,
+    (videoIframe.dataset.highestPlayback * 100)
+    / Math.floor(videoIframe.dataset.length)
+    + 0.01,
   );
   videoDigitalData.page.video.milestone = (Math.floor(percent / 25 + 0.01) * 25).toString();
   if (interactionType.includes('video-milestone')) {
@@ -295,10 +297,10 @@ export function trackInteraction(element, overrides = {}) {
         return;
       }
       if (
-        link.origin === window.location.origin &&
-        link.pathname === window.location.pathname &&
-        link.hash !== '#0' &&
-        componentType === 'header'
+        link.origin === window.location.origin
+        && link.pathname === window.location.pathname
+        && link.hash !== '#0'
+        && componentType === 'header'
       ) {
         interactionType.push('link-header');
       }
@@ -312,9 +314,9 @@ export function trackInteraction(element, overrides = {}) {
       }
 
       if (
-        link.classList.contains('results__item-address-phone') &&
-        link.classList.contains('results__item-address-directions') &&
-        link.classList.contains('results__item-address-website')
+        link.classList.contains('results__item-address-phone')
+        && link.classList.contains('results__item-address-directions')
+        && link.classList.contains('results__item-address-website')
       ) {
         interactionType.push('link-doctor-locator');
       }
@@ -443,6 +445,7 @@ export function trackInteraction(element, overrides = {}) {
 
       if (interactionDigitalData.page.component.title === '') {
         interactionDigitalData.page.component.title = interactionDigitalData.page.link.displayTitle;
+        // eslint-disable-next-line max-len
         interactionDigitalData.page.component.l10title = interactionDigitalData.page.link.displayTitle;
       }
 

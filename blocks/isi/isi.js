@@ -1,4 +1,3 @@
-import { button, div, span } from '../../scripts/dom-helpers.js';
 import setAttributes from '../../scripts/set-attributes.js';
 import { trackInteraction } from '../../scripts/datalayer.js';
 
@@ -51,19 +50,19 @@ function setExpander(title, contentContainer) {
     'aria-hidden': !isOpen,
   });
 
-  return button(
-    {
-      type: 'button',
-      class: `${BLOCK_CLASS}-toggle`,
-      'aria-expanded': true,
-      'aria-controls': contentContainer.id,
-      onClick: handleToggler,
-    },
-    span(
-      { class: `${BLOCK_CLASS}-toggle-label` },
-      BLOCK_EXPANDER_DEFAULT_OPEN ? BLOCK_COLLAPSE_TEXT : BLOCK_EXPAND_TEXT,
-    ),
-  );
+  const buttonElement = document.createElement('button');
+  buttonElement.type = 'button';
+  buttonElement.className = `${BLOCK_CLASS}-toggle`;
+  buttonElement.setAttribute('aria-expanded', true);
+  buttonElement.setAttribute('aria-controls', contentContainer.id);
+  buttonElement.addEventListener('click', handleToggler);
+
+  const spanElement = document.createElement('span');
+  spanElement.className = `${BLOCK_CLASS}-toggle-label`;
+  spanElement.innerText = BLOCK_EXPANDER_DEFAULT_OPEN ? BLOCK_COLLAPSE_TEXT : BLOCK_EXPAND_TEXT;
+  buttonElement.appendChild(spanElement);
+
+  return buttonElement;
 }
 
 /**
@@ -76,7 +75,8 @@ function render(block) {
   const title = titleInner.querySelector(':scope > *');
   const contentContainer = block.querySelector(':scope > div:last-child');
   const contentWrap = contentContainer.querySelector(':scope > div');
-  const contentInner = div({ class: `${BLOCK_CLASS}-content-inner` });
+  const contentInner = document.createElement('div');
+  contentInner.className = `${BLOCK_CLASS}-content-inner`;
   const expanderButton = setExpander(title, contentContainer);
 
   titleContainer.classList.add(`${BLOCK_CLASS}-title-container`);
