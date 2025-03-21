@@ -1,1 +1,24 @@
-/* stylelint-disable no-empty-source */
+.isi-content h1 {
+	font-family: var(--isi-title-font-family);
+	line-height: 34px;
+}
+
+.isi-content h2 {
+	font-family: var(--isi-title-font-family);
+	margin: 0 0 5px;
+}
+
+.isi-content p,
+.isi-content li {
+	margin: 0 0 14px;
+	word-wrap: break-word;
+}
+
+.isi-content li:not(:last-child) {
+	margin: 0 0 14px;
+	word-wrap: break-word;
+}
+
+.isi-content ul {
+	padding-inline-start: 20px;
+}
