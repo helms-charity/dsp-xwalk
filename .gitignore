@@ -10,5 +10,4 @@ helix-importer-ui
 .iml
 .vscode
 .cursor
-.husky
 package-lock.json
