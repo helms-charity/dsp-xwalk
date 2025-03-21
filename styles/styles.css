@@ -612,7 +612,7 @@ main .section.carousel-container:first-of-type > div {
   max-width: 1440px;
 }
 
-@media (max-width: 767px) {
+@media (width <= 767px) {
   main .section.about-durysta .columns-wrapper,
   main .section.client-testimonial .columns-wrapper {
     width: auto; /* size is different than default <p> only on tablet down */
@@ -733,7 +733,7 @@ main .modal-container {
   width: 100%;
   height: 100%;
   z-index: 1000;
-  overflow: hidden auto; /* Combines overflow-x: hidden and overflow-y: auto */
+overflow: hidden auto; /* Combines overflow-x: hidden and overflow-y: auto */
   background-color: var(--modal-container-background-color);
 }
 
@@ -830,8 +830,7 @@ main .video-container {
   width: 100%;
   height: 100%;
   z-index: 1000;
-  overflow-x: hidden;
-  overflow-y: auto;
+  overflow: hidden auto;
   display: none;
 }
 
@@ -907,7 +906,7 @@ main .video-wrap {
   height: auto;
   width: var(--video-width);
   width: 100%;
-  padding: 60px 25px 65px;
+   padding: 60px 25px 65px;
 }
 
 main .video-iframe {
