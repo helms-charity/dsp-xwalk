@@ -42,13 +42,14 @@ export function domEl(tag, ...items) {
       }
     });
 
-    items = remainingItems; // Assign the new variable to items
+    items = remainingItems; // Replace this line
   }
 
-  items.forEach((child) => {
+  const finalItems = items; // Create a new variable to avoid reassigning the parameter
+  finalItems.forEach((child) => {
     const childElement = child instanceof Element || child instanceof HTMLElement
       ? child
-      : document.createTextNode(child); // Create a new variable for the child
+      : document.createTextNode(child);
     element.appendChild(childElement);
   });
 

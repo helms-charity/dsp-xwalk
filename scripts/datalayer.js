@@ -148,7 +148,9 @@ function trackVideoDetails(videoDigitalData, videoIframe, interactionType) {
   if (videoIframe.dataset.action === 'replay') videoIframe.dataset.highestPlayback = '0';
   videoDigitalData.page.video.length = videoIframe.dataset.length;
   const percent = Math.floor(
-    (videoIframe.dataset.highestPlayback * 100) / Math.floor(videoIframe.dataset.length) + 0.01,
+    (videoIframe.dataset.highestPlayback * 100) /
+      Math.floor(videoIframe.dataset.length) +
+      0.01,
   );
   videoDigitalData.page.video.milestone = (Math.floor(percent / 25 + 0.01) * 25).toString();
   if (interactionType.includes('video-milestone')) {
@@ -310,9 +312,9 @@ export function trackInteraction(element, overrides = {}) {
       }
 
       if (
-        link.classList.contains('results__item-address-phone')
-        && link.classList.contains('results__item-address-directions')
-        && link.classList.contains('results__item-address-website')
+        link.classList.contains('results__item-address-phone') &&
+        link.classList.contains('results__item-address-directions') &&
+        link.classList.contains('results__item-address-website')
       ) {
         interactionType.push('link-doctor-locator');
       }
