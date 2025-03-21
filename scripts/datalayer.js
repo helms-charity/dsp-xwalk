@@ -72,7 +72,6 @@ const deepCopy = (obj) => JSON.parse(JSON.stringify(obj));
 let allInteractionData = {};
 let allInteractionTypeData = {};
 
-/* stylelint-disable max-len */
 export function getInteractionData(matcher, matchMultiple = false, dataSource = allInteractionData) {
   let result = {};
   dataSource.forEach((d) => {
@@ -84,7 +83,9 @@ export function getInteractionData(matcher, matchMultiple = false, dataSource = 
         if (keys.length === 1) {
           const matcherValue = matcher[key];
           if (Array.isArray(matcherValue)) {
-            const isArrayMatch = value.split(',').every((x) => matcherValue.includes(x));
+            const isArrayMatch = value.split(',').every((x) =>
+              matcherValue.includes(x)
+            );
             isMatch = isMatch && isArrayMatch;
           } else if (key === 'url' && matcherValue !== undefined && matcherValue !== null && matcherValue !== '') {
             isMatch = isMatch && matcherValue.split('?')[0] === value.split('?')[0];
@@ -438,7 +439,6 @@ export function trackInteraction(element, overrides = {}) {
         interactionDigitalData.page.link.displayTitle = element.getAttribute('aria-label');
       }
 
-      /* stylelint-disable max-len */
       if (interactionDigitalData.page.component.title === '') {
         interactionDigitalData.page.component.title = interactionDigitalData.page.link.displayTitle;
         interactionDigitalData.page.component.l10title = interactionDigitalData.page.link.displayTitle;

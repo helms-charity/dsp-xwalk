@@ -31,8 +31,8 @@ export function domEl(tag, ...items) {
   if (!items || items.length === 0) return element;
 
   if (!(items[0] instanceof Element || items[0] instanceof HTMLElement) && typeof items[0] === 'object') {
-    const [attributes, ...rest] = items;
-    items = rest;
+    const [attributes, ...rest] = items; // Keep items unchanged
+    const remainingItems = rest; // Create a new variable for the remaining items
 
     Object.entries(attributes).forEach(([key, value]) => {
       if (!key.startsWith('on')) {
@@ -41,13 +41,15 @@ export function domEl(tag, ...items) {
         element.addEventListener(key.substring(2).toLowerCase(), value);
       }
     });
+
+    items = remainingItems; // Assign the new variable to items
   }
 
-  items.forEach((item) => {
-    item = item instanceof Element || item instanceof HTMLElement
-      ? item
-      : document.createTextNode(item);
-    element.appendChild(item);
+  items.forEach((child) => {
+    const childElement = child instanceof Element || child instanceof HTMLElement
+      ? child
+      : document.createTextNode(child); // Create a new variable for the child
+    element.appendChild(childElement);
   });
 
   return element;
