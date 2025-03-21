@@ -132,7 +132,7 @@
     display: none;
   }
   
-  @media (min-width: 768px) {
+  @media (width >= 768px) {
     .isi-content-wrap {
       border-bottom-color: var(--clr-green);
     }
@@ -163,7 +163,7 @@
     }
   }
   
-  @media (min-width: 992px) {
+  @media (width >= 992px) {
     .isi-title-inner,
     .isi-content-inner {
       padding-right: 35px;
@@ -184,7 +184,7 @@
     }
   }
   
-  @media (min-width: 1200px) {
+  @media (width >= 1200px) {
     .isi-title-inner,
     .isi-content-inner {
       padding-right: 0;
