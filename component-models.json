@@ -195,11 +195,11 @@
     "id": "isi",
     "fields": [
        {
-         "component": "richtext",
-         "name": "isi",
-         "value": "",
-         "label": "ISI",
-         "valueType": "string"
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
        }
      ]
   }  
