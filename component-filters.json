@@ -15,8 +15,7 @@
       "hero",
       "cards",
       "columns",
-      "fragment",
-      "isi"
+      "fragment"
     ]
   },
   {
@@ -39,5 +38,9 @@
       "button",
       "title"
     ]
+  },
+  {
+    "id": "page-metadata",
+    "components": []
   }
 ]

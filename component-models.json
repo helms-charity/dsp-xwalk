@@ -112,10 +112,6 @@
           {
             "name": "Highlight",
             "value": "highlight"
-          },
-          {
-            "name": "testing",
-            "value": "testing"
           }
         ]
       }
@@ -195,39 +191,51 @@
       }
     ]
   },
-   {
-      "id": "page-metadata",
-      "fields": [
-        {
-          "component": "text",
-          "valueType": "string",
-          "name": "jcr:title",
-          "label": "Title"
-        },
-        {
-          "component": "text",
-          "valueType": "string",
-          "name": "pageTitle",
-          "label": "Page Title"
-        },
-        {
-          "component": "text",
-          "valueType": "string",
-          "name": "navigationTitle",
-          "label": "Navigation Title"
-        },
-        {
-          "component": "text",
-          "valueType": "string",
-          "name": "subtitle",
-          "label": "Subtitle"
-        },
-        {
-          "component": "text",
-          "valueType": "string",
-          "name": "jcr:description",
-          "label": "Discription"
-        }
-      ]
-    }
+  {
+    "id": "isi",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "page-metadata",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "jcr:title",
+        "label": "Title"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "pageTitle",
+        "label": "Page Title"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "navigationTitle",
+        "label": "Navigation Title"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "subtitle",
+        "label": "Subtitle"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "jcr:description",
+        "label": "Discription"
+      }
+    ]
+  }
 ]
