@@ -52,5 +52,11 @@
         }
       ]
     }
+  ],
+    "filters": [
+    {
+      "id": "page-metadata",
+      "components": []
+    }
   ]
 }
