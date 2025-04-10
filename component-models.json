@@ -221,12 +221,6 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "navigationTitle",
-        "label": "Navigation Title"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
         "name": "subtitle",
         "label": "Subtitle"
       },
