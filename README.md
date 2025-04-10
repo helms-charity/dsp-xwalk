@@ -3,7 +3,7 @@ DSP Crosswalk
 
 ## Environments
 
-- Live: https://main--dsp-xwalk--helms-charity.hlx.page
+- Live: https://main--dsp-xwalk--helms-charity.hlx.page.live
 
 ## Documentation
 
