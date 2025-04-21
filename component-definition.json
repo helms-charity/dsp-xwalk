@@ -83,7 +83,7 @@
       "id": "blocks",
       "components": [
         {
-          "title": "Cardsss",
+          "title": "Cards",
           "id": "cards",
           "plugins": {
             "xwalk": {
