@@ -40,20 +40,7 @@
           "label": "Type",
           "options": [
             {
-              "name": "default",
-              "value": ""
-            },
-            {
-              "name": "primary",
-              "value": "primary"
-            },
-            {
-              "name": "secondary",
-              "value": "secondary"
-            },
-            {
-              "name": "testing",
-              "value": "testing"
+              "...": "./partials/_button-types.json#/options"
             }
           ]
         }

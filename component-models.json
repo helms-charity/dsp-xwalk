@@ -80,20 +80,16 @@
         "label": "Type",
         "options": [
           {
-            "name": "default",
+            "name": "Primary/Default",
             "value": ""
           },
           {
-            "name": "primary",
-            "value": "primary"
-          },
-          {
-            "name": "secondary",
+            "name": "Secondary",
             "value": "secondary"
           },
           {
-            "name": "testing",
-            "value": "testing"
+            "name": "Tertiary",
+            "value": "tertiary"
           }
         ]
       }
@@ -204,12 +200,27 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "id",
+        "label": "Identifier"
       }
     ]
   },
   {
     "id": "page-metadata",
     "fields": [
+      {
+        "component": "text",
+        "name": "pageId",
+        "label": "Analytics Page ID"
+      },
+      {
+        "component": "boolean",
+        "name": "target",
+        "label": "Enable Target - TODO"
+      },
       {
         "component": "text",
         "valueType": "string",
