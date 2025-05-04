@@ -22,6 +22,11 @@
       "fields": [
         {
           "component": "text",
+          "name": "id",
+          "label": "Column ID"
+        },
+        {
+          "component": "text",
           "valueType": "number",
           "name": "columns",
           "value": "",
@@ -36,10 +41,14 @@
         },
         {
           "component": "select",
-          "name": "style",
+          "name": "classes",
           "label": "Column 1 bg color style",
           "value": "",
           "options": [
+            {
+              "name": "none",
+              "value": "none"
+            },
             {
               "name": "green",
               "value": "col1-green"
@@ -47,22 +56,6 @@
             {
               "name": "yellow",
               "value": "col1-yellow"
-            }
-          ]
-        },
-        {
-          "component": "select",
-          "name": "classes",
-          "label": "Column 2 bg color",
-          "value": "",
-          "options": [
-            {
-              "name": "green",
-              "value": "col2-green"
-            },
-            {
-              "name": "yellow",
-              "value": "col2-yellow"
             }
           ]
         }

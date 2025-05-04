@@ -75,6 +75,13 @@ function buildMediaDependentPicture(main) {
   });
 }
 
+function decorateSectionAnchors(main) {
+  main.querySelectorAll('.section[data-anchor]').forEach((section) => {
+    const { anchor } = section.dataset;
+    section.id = anchor;
+  });
+}
+
 /**
  * Builds all synthetic blocks in a container element.
  * @param {Element} main The container element
@@ -528,6 +535,7 @@ export function decorateMain(main) {
   decorateIcons(main);
   buildAutoBlocks(main);
   decorateSections(main);
+  decorateSectionAnchors(main);
   decorateBlocks(main);
   decorateVideo(main);
   decorateAnchors(main);
