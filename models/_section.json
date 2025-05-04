@@ -56,7 +56,8 @@
         "cards",
         "columns",
         "fragment",
-        "isi"
+        "isi",
+        "columns-bg"
       ]
     }
   ]
