@@ -113,6 +113,36 @@
           }
         },
         {
+          "title": "Column cells with background color",
+          "id": "columns-bg",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/columns/v1/block",
+                "template": {
+                  "columns": "2",
+                  "rows": "1"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Column cell",
+          "id": "column-bg",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/columns/v1/block/item",
+                "template": {
+                  "name": "column cell",
+                  "model": "column-bg"
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "Columns",
           "id": "columns",
           "plugins": {

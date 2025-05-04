@@ -26,6 +26,21 @@
     ]
   },
   {
+    "id": "columns-bg",
+    "components": [
+      "column-bg"
+    ]
+  },
+  {
+    "id": "column-bg",
+    "components": [
+      "text",
+      "image",
+      "button",
+      "title"
+    ]
+  },
+  {
     "id": "columns",
     "components": [
       "column"

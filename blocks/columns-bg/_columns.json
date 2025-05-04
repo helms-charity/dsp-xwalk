@@ -1,0 +1,102 @@
+{
+  "definitions": [
+    {
+      "title": "Column cells with background color",
+      "id": "columns-bg",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/columns/v1/block",
+            "template": {
+              "columns": "2",
+              "rows": "1"
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "Column cell",
+      "id": "column-bg",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/columns/v1/block/item",
+            "template": {
+              "name": "column cell",
+              "model": "column-bg"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "columns-bg",
+      "fields": [
+        {
+          "component": "text",
+          "name": "id",
+          "label": "Column ID"
+        },
+        {
+          "component": "text",
+          "valueType": "number",
+          "name": "columns",
+          "value": "",
+          "label": "Columns"
+        },
+        {
+          "component": "text",
+          "valueType": "number",
+          "name": "rows",
+          "value": "",
+          "label": "Rows"
+        }
+      ]
+    },
+    {
+      "id": "column-bg",
+      "fields": [
+        {
+            "component": "select",
+            "name": "classes",
+            "label": "background color style",
+            "value": "",
+            "options": [
+              {
+                "name": "none",
+                "value": "none"
+              },
+              {
+                "name": "green",
+                "value": "green"
+              },
+              {
+                "name": "yellow",
+                "value": "yellow"
+              }
+            ]
+        }
+      ]
+    }
+  ],
+  "filters": [
+    {
+      "id": "columns-bg",
+      "components": [
+        "column-bg"
+      ]
+    },
+    {
+      "id": "column-bg",
+      "components": [
+        "text",
+        "image",
+        "button",
+        "title"
+      ]
+    }
+  ]
+}

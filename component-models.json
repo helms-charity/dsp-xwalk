@@ -142,6 +142,55 @@
     ]
   },
   {
+    "id": "columns-bg",
+    "fields": [
+      {
+        "component": "text",
+        "name": "id",
+        "label": "Column ID"
+      },
+      {
+        "component": "text",
+        "valueType": "number",
+        "name": "columns",
+        "value": "",
+        "label": "Columns"
+      },
+      {
+        "component": "text",
+        "valueType": "number",
+        "name": "rows",
+        "value": "",
+        "label": "Rows"
+      }
+    ]
+  },
+  {
+    "id": "column-bg",
+    "fields": [
+      {
+        "component": "select",
+        "name": "classes",
+        "label": "background color style",
+        "value": "",
+        "options": [
+          {
+            "name": "none",
+            "value": "none"
+          },
+          {
+            "name": "green",
+            "value": "green"
+          },
+          {
+            "name": "yellow",
+            "value": "yellow"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "columns",
     "fields": [
       {
@@ -180,46 +229,6 @@
           {
             "name": "yellow",
             "value": "col1-yellow"
-          }
-        ]
-      },
-      {
-        "component": "select",
-        "name": "classes",
-        "label": "Column 2 bg color",
-        "value": "",
-        "options": [
-          {
-            "name": "none",
-            "value": "none"
-          },
-          {
-            "name": "green",
-            "value": "col2-green"
-          },
-          {
-            "name": "yellow",
-            "value": "col2-yellow"
-          }
-        ]
-      },
-      {
-        "component": "select",
-        "name": "classes",
-        "label": "Column 3 bg color",
-        "value": "",
-        "options": [
-          {
-            "name": "none",
-            "value": "none"
-          },
-          {
-            "name": "green",
-            "value": "col3-green"
-          },
-          {
-            "name": "yellow",
-            "value": "col3-yellow"
           }
         ]
       }

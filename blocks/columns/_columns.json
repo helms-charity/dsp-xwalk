@@ -58,46 +58,6 @@
               "value": "col1-yellow"
             }
           ]
-        },
-        {
-          "component": "select",
-          "name": "classes",
-          "label": "Column 2 bg color",
-          "value": "",
-          "options": [
-            {
-              "name": "none",
-              "value": "none"
-            },
-            {
-              "name": "green",
-              "value": "col2-green"
-            },
-            {
-              "name": "yellow",
-              "value": "col2-yellow"
-            }
-          ]
-        },
-        {
-          "component": "select",
-          "name": "classes",
-          "label": "Column 3 bg color",
-          "value": "",
-          "options": [
-            {
-              "name": "none",
-              "value": "none"
-            },
-            {
-              "name": "green",
-              "value": "col3-green"
-            },
-            {
-              "name": "yellow",
-              "value": "col3-yellow"
-            }
-          ]
         }
       ]
     }
