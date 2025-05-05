@@ -8,18 +8,6 @@
     width: 100%;
   }
 
-  .columnsjo .green {
-    background-color: green;
-  }
-
-  .columnsjo .yellow {
-    background-color: yellow;
-  }
-
-  .columnsjo .none {
-    background-color: white;
-  }
-
   .columnsjo > div > div {
     order: 1;
   }
@@ -153,6 +141,14 @@
     text-align: center;
     min-height: 296px;
     box-sizing: border-box;
+  }
+
+  .columnsjo .green {
+    background: green;
+  }
+
+  .columnsjo .yellow {
+    background: yellow;
   }
   
   
