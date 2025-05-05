@@ -58,9 +58,13 @@ export default function decorate(block) {
     const parts = p.textContent.split(',').map((s) => s.trim());
     if (parts.length === 2) {
       const div = p.parentElement;
-      if (div && div.parentElement) {
-        div.parentElement.classList.add(parts[1]);
-        div.remove();
+      const parent = div.parentElement;
+      if (div && parent) {
+        const nextDiv = parent.nextElementSibling;
+        if (nextDiv && nextDiv.tagName === 'DIV') {
+          nextDiv.classList.add(parts[1]);
+        }
+        parent.remove();
       }
     }
   });
