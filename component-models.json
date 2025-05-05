@@ -256,6 +256,134 @@
     ]
   },
   {
+    "id": "columnsjo",
+    "fields": [
+      {
+        "component": "select",
+        "name": "classes",
+        "valueType": "string",
+        "label": "Style",
+        "value": "",
+        "options": [
+          {
+            "name": "Grid",
+            "value": "grid"
+          },
+          {
+            "name": "Grid with Icons",
+            "value": "grid-placeholder-icons"
+          },
+          {
+            "name": "Promo",
+            "value": "promo"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "columnsjo-text",
+    "fields": [
+      {
+        "component": "text",
+        "name": "classes",
+        "valueType": "string",
+        "hidden": true
+      },
+      {
+        "component": "text",
+        "name": "grid_title",
+        "label": "Title",
+        "valueType": "string",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "grid_description",
+        "label": "Description",
+        "valueType": "string",
+        "multi": false
+      }
+    ]
+  },
+  {
+    "id": "columnsjo-icon",
+    "fields": [
+      {
+        "component": "text",
+        "name": "classes",
+        "valueType": "string",
+        "hidden": true
+      },
+      {
+        "component": "select",
+        "name": "gridIcon_icon",
+        "value": "",
+        "label": "Icon",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Search",
+            "value": ":search:"
+          },
+          {
+            "name": "Arrow",
+            "value": ":chevron-right:"
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "name": "gridIcon_description",
+        "label": "Description",
+        "valueType": "string",
+        "multi": false
+      }
+    ]
+  },
+  {
+    "id": "columnsjo-promo",
+    "fields": [
+      {
+        "component": "text",
+        "name": "classes",
+        "valueType": "string",
+        "hidden": true
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "gridPromo_image",
+        "label": "Image"
+      },
+      {
+        "component": "text",
+        "name": "gridPromo_description",
+        "label": "Description",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "columns",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "number",
+        "name": "columns",
+        "value": "",
+        "label": "Columns"
+      },
+      {
+        "component": "text",
+        "valueType": "number",
+        "name": "rows",
+        "value": "",
+        "label": "Rows"
+      }
+    ]
+  },
+  {
     "id": "fragment",
     "fields": [
       {
