@@ -363,10 +363,6 @@
               {
                 "name": "No Header",
                 "value": "no-header"
-              },
-              {
-                "name": "green Header",
-                "value": "green-header"
               }
             ]
           }
