@@ -63,7 +63,7 @@
           "component": "select",
           "name": "classes",
           "label": "background color style",
-          "value": "",
+          "value": ["none"],
           "options": [
             {
               "name": "none",
