@@ -53,4 +53,14 @@ export default function decorate(block) {
     authorBlock.textContent = 'Columns JS Object container for enrichment';
     block.appendChild(authorBlock);
   }
+
+  document.querySelectorAll('div > p').forEach((p) => {
+    if (p.textContent.trim() === 'icon, green') {
+      const div = p.parentElement;
+      if (div) {
+        div.parentElement.classList.add('icon', 'green');
+        div.remove();
+      }
+    }
+  });
 }
