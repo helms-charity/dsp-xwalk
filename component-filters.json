@@ -18,7 +18,8 @@
       "fragment",
       "isi",
       "card-columns",
-      "table"
+      "table",
+      "columnsjo"
     ]
   },
   {
@@ -46,6 +47,14 @@
       "image",
       "button",
       "title"
+    ]
+  },
+  {
+    "id": "columnsjo",
+    "components": [
+      "columnsjo-text",
+      "columnsjo-icon",
+      "columnsjo-promo"
     ]
   },
   {

@@ -58,7 +58,8 @@
         "fragment",
         "isi",
         "card-columns",
-        "table"
+        "table",
+        "columnsjo"
       ]
     }
   ]
