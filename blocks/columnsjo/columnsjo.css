@@ -8,15 +8,15 @@
     width: 100%;
   }
 
-  .columnsjo.green {
+  .columnsjo .green {
     background-color: green;
   }
 
-  .columnsjo.yellow {
+  .columnsjo .yellow {
     background-color: yellow;
   }
 
-  .columnsjo.none {
+  .columnsjo .none {
     background-color: white;
   }
 
