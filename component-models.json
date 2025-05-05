@@ -310,9 +310,25 @@
     "id": "columnsjo-icon",
     "fields": [
       {
-        "component": "text",
+        "component": "select",
         "name": "classes",
-        "valueType": "string"
+        "valueType": "string",
+        "label": "Style",
+        "value": "",
+        "options": [
+          {
+            "name": "Green",
+            "value": "green"
+          },
+          {
+            "name": "yellow",
+            "value": "yellow"
+          },
+          {
+            "name": "none",
+            "value": "none"
+          }
+        ]
       },
       {
         "component": "select",

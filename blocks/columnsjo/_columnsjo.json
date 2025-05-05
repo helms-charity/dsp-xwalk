@@ -126,11 +126,27 @@
           {
             "id": "columnsjo-icon",
             "fields": [
-              {
-                "component": "text",
-                "name": "classes",
-                "valueType": "string"
-              },
+                {
+                    "component": "select",
+                    "name": "classes",
+                    "valueType": "string",
+                    "label": "Style",
+                    "value": "",
+                    "options": [
+                      {
+                        "name": "Green",
+                        "value": "green"
+                      },
+                      {
+                        "name": "yellow",
+                        "value": "yellow"
+                      },
+                      {
+                        "name": "none",
+                        "value": "none"
+                      }
+                    ]
+                  },
               {
                 "component": "select",
                 "name": "gridIcon_icon",
