@@ -7,7 +7,19 @@
   .columnsjo img {
     width: 100%;
   }
-  
+
+  .columnsjo.green {
+    background-color: green;
+  }
+
+  .columnsjo.yellow {
+    background-color: yellow;
+  }
+
+  .columnsjo.none {
+    background-color: white;
+  }
+
   .columnsjo > div > div {
     order: 1;
   }

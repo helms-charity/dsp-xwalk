@@ -54,11 +54,12 @@ export default function decorate(block) {
     block.appendChild(authorBlock);
   }
 
-  document.querySelectorAll('div > p').forEach((p) => {
-    if (p.textContent.trim() === 'icon, green') {
+  block.querySelectorAll('div > p').forEach((p) => {
+    const parts = p.textContent.split(',').map((s) => s.trim());
+    if (parts.length === 2) {
       const div = p.parentElement;
-      if (div) {
-        div.parentElement.classList.add('icon', 'green');
+      if (div && div.parentElement) {
+        div.parentElement.classList.add(parts[1]);
         div.remove();
       }
     }
