@@ -64,7 +64,7 @@ export default function decorate(block) {
         if (nextDiv && nextDiv.tagName === 'DIV') {
           nextDiv.classList.add(parts[1]);
         }
-        parent.remove();
+        div.remove();
       }
     }
   });
