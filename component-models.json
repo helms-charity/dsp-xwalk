@@ -312,8 +312,7 @@
       {
         "component": "text",
         "name": "classes",
-        "valueType": "string",
-        "hidden": true
+        "valueType": "string"
       },
       {
         "component": "select",
