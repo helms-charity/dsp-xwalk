@@ -123,7 +123,17 @@
     ]
   },
   {
-    "id": "card",
+    "id": "card-columns",
+    "fields": [
+      {
+        "component": "text",
+        "name": "id",
+        "label": "Card-columns ID"
+      }
+    ]
+  },
+  {
+    "id": "card-column",
     "fields": [
       {
         "component": "reference",
@@ -138,36 +148,7 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "columns-bg",
-    "fields": [
-      {
-        "component": "text",
-        "name": "id",
-        "label": "Column ID"
       },
-      {
-        "component": "text",
-        "valueType": "number",
-        "name": "columns",
-        "value": "",
-        "label": "Columns"
-      },
-      {
-        "component": "text",
-        "valueType": "number",
-        "name": "rows",
-        "value": "",
-        "label": "Rows"
-      }
-    ]
-  },
-  {
-    "id": "column-bg",
-    "fields": [
       {
         "component": "select",
         "name": "classes",
@@ -187,6 +168,25 @@
             "value": "yellow"
           }
         ]
+      }
+    ]
+  },
+  {
+    "id": "card",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
       }
     ]
   },
