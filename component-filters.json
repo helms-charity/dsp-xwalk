@@ -17,28 +17,19 @@
       "columns",
       "fragment",
       "isi",
-      "columns-bg"
+      "card-columns"
+    ]
+  },
+  {
+    "id": "card-columns",
+    "components": [
+      "card-column"
     ]
   },
   {
     "id": "cards",
     "components": [
       "card"
-    ]
-  },
-  {
-    "id": "columns-bg",
-    "components": [
-      "column-bg"
-    ]
-  },
-  {
-    "id": "column-bg",
-    "components": [
-      "text",
-      "image",
-      "button",
-      "title"
     ]
   },
   {

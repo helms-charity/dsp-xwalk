@@ -1,0 +1,93 @@
+{
+  "definitions": [
+    {
+      "title": "Card Columns",
+      "id": "card-columns",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "Card Columns",
+              "filter": "card-columns"
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "Card Column",
+      "id": "card-column",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "Card Column",
+              "model": "card-column"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "card-columns",
+      "fields": [
+        {
+          "component": "text",
+          "name": "id",
+          "label": "Card-columns ID"
+        }
+      ]
+    },
+    {
+      "id": "card-column",
+      "fields": [
+        {
+          "component": "reference",
+          "valueType": "string",
+          "name": "image",
+          "label": "Image",
+          "multi": false
+        },
+        {
+          "component": "richtext",
+          "name": "text",
+          "value": "",
+          "label": "Text",
+          "valueType": "string"
+        },
+        {
+          "component": "select",
+          "name": "classes",
+          "label": "background color style",
+          "value": "",
+          "options": [
+            {
+              "name": "none",
+              "value": "none"
+            },
+            {
+              "name": "green",
+              "value": "green"
+            },
+            {
+              "name": "yellow",
+              "value": "yellow"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "filters": [
+    {
+      "id": "card-columns",
+      "components": [
+        "card-column"
+      ]
+    }
+  ]
+}
