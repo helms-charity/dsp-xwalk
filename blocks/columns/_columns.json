@@ -42,7 +42,7 @@
         {
           "component": "multiselect",
           "name": "classes",
-          "value": ["col1", "none"],
+          "value": "",
           "label": "Style",
           "valueType": "string",
           "options": [
