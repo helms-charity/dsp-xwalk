@@ -270,10 +270,6 @@
             "value": "grid"
           },
           {
-            "name": "Grid with Icons",
-            "value": "grid-placeholder-icons"
-          },
-          {
             "name": "Promo",
             "value": "promo"
           }
@@ -283,31 +279,6 @@
   },
   {
     "id": "columnsjo-text",
-    "fields": [
-      {
-        "component": "text",
-        "name": "classes",
-        "valueType": "string",
-        "hidden": true
-      },
-      {
-        "component": "text",
-        "name": "grid_title",
-        "label": "Title",
-        "valueType": "string",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "name": "grid_description",
-        "label": "Description",
-        "valueType": "string",
-        "multi": false
-      }
-    ]
-  },
-  {
-    "id": "columnsjo-icon",
     "fields": [
       {
         "component": "select",
@@ -331,51 +302,18 @@
         ]
       },
       {
-        "component": "select",
-        "name": "gridIcon_icon",
-        "value": "",
-        "label": "Icon",
+        "component": "text",
+        "name": "grid_title",
+        "label": "Title",
         "valueType": "string",
-        "options": [
-          {
-            "name": "Search",
-            "value": ":search:"
-          },
-          {
-            "name": "Arrow",
-            "value": ":chevron-right:"
-          }
-        ]
+        "multi": false
       },
       {
         "component": "text",
-        "name": "gridIcon_description",
+        "name": "grid_description",
         "label": "Description",
         "valueType": "string",
         "multi": false
-      }
-    ]
-  },
-  {
-    "id": "columnsjo-promo",
-    "fields": [
-      {
-        "component": "text",
-        "name": "classes",
-        "valueType": "string",
-        "hidden": true
-      },
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "gridPromo_image",
-        "label": "Image"
-      },
-      {
-        "component": "text",
-        "name": "gridPromo_description",
-        "label": "Description",
-        "valueType": "string"
       }
     ]
   },

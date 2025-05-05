@@ -33,42 +33,6 @@
         }
       }
     }
-  },
-  {
-    "title": "Icon",
-    "id": "columnsjo-icon",
-    "plugins": {
-      "xwalk": {
-        "page": {
-          "resourceType": "core/franklin/components/block/v1/block/item",
-          "template": {
-            "model": "columnsjo-icon",
-            "name": "Icon",
-            "gridIcon_icon": ":search:",
-            "gridIcon_description": "Placeholder Description",
-            "classes": "icon-layout"
-          }
-        }
-      }
-    }
-  },
-  {
-    "title": "Promo",
-    "id": "columnsjo-promo",
-    "plugins": {
-      "xwalk": {
-        "page": {
-          "resourceType": "core/franklin/components/block/v1/block/item",
-          "template": {
-            "model": "columnsjo-promo",
-            "name": "Promo",
-            "gridPromo_image": "/content/dam/citisignal/product-enrichment-1.png",
-            "gridPromo_description": "Placeholder Description",
-            "classes": "promo-layout"
-          }
-        }
-      }
-    }
   }
     ],
     "models": [
@@ -87,10 +51,6 @@
                     "value": "grid"
                   },
                   {
-                    "name": "Grid with Icons",
-                    "value": "grid-placeholder-icons"
-                  },
-                  {
                     "name": "Promo",
                     "value": "promo"
                   }
@@ -100,31 +60,6 @@
           },
           {
             "id": "columnsjo-text",
-            "fields": [
-              {
-                "component": "text",
-                "name": "classes",
-                "valueType": "string",
-                "hidden": true
-              },
-              {
-                "component": "text",
-                "name": "grid_title",
-                "label": "Title",
-                "valueType": "string",
-                "multi": false
-              },
-              {
-                "component": "text",
-                "name": "grid_description",
-                "label": "Description",
-                "valueType": "string",
-                "multi": false
-              }
-            ]
-          },
-          {
-            "id": "columnsjo-icon",
             "fields": [
                 {
                     "component": "select",
@@ -148,51 +83,18 @@
                     ]
                   },
               {
-                "component": "select",
-                "name": "gridIcon_icon",
-                "value": "",
-                "label": "Icon",
+                "component": "text",
+                "name": "grid_title",
+                "label": "Title",
                 "valueType": "string",
-                "options": [
-                  {
-                    "name": "Search",
-                    "value": ":search:"
-                  },
-                  {
-                    "name": "Arrow",
-                    "value": ":chevron-right:"
-                  }
-                ]
+                "multi": false
               },
               {
                 "component": "text",
-                "name": "gridIcon_description",
+                "name": "grid_description",
                 "label": "Description",
                 "valueType": "string",
                 "multi": false
-              }
-            ]
-          },
-          {
-            "id": "columnsjo-promo",
-            "fields": [
-              {
-                "component": "text",
-                "name": "classes",
-                "valueType": "string",
-                "hidden": true
-              },
-              {
-                "component": "reference",
-                "valueType": "string",
-                "name": "gridPromo_image",
-                "label": "Image"
-              },
-              {
-                "component": "text",
-                "name": "gridPromo_description",
-                "label": "Description",
-                "valueType": "string"
               }
             ]
           },
@@ -219,7 +121,7 @@
     "filters": [
         {
             "id": "columnsjo",
-            "components": ["columnsjo-text", "columnsjo-icon", "columnsjo-promo"]
+            "components": ["columnsjo-text, columns"]
             }
     ]
 }
