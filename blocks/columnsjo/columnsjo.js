@@ -60,10 +60,7 @@ export default function decorate(block) {
       const div = p.parentElement;
       const parent = div.parentElement;
       if (div && parent) {
-        const nextDiv = parent.nextElementSibling;
-        if (nextDiv && nextDiv.tagName === 'DIV') {
-          nextDiv.classList.add(parts[1]);
-        }
+        div.parentElement.classList.add(parts[1]);
         div.remove();
       }
     }

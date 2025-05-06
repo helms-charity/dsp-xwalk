@@ -153,13 +153,11 @@
         "component": "select",
         "name": "classes",
         "label": "background color style",
-        "value": [
-          "none"
-        ],
+        "value": "",
         "options": [
           {
-            "name": "none",
-            "value": "none"
+            "name": "white",
+            "value": "white"
           },
           {
             "name": "green",
