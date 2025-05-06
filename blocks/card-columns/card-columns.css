@@ -32,6 +32,15 @@
   color: white;
 }
 
+.card-columms .green ul {
+  list-style-type: none;
+  border: 2px solid red;
+}
+
+.card-columms .green li {
+
+}
+
 .card-columns .yellow {
   background: linear-gradient(306.26deg, rgb(0 128 110 / 20%) 0, rgb(0 128 110 / 0%) 99.53%), goldenrod;
 }
