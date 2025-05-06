@@ -1,10 +1,12 @@
 .isi {
-    position: fixed;
+    /* position: fixed; not needed anymore */
     right: 0;
     bottom: 0;
     left: 0;
+    background: white;
+    padding: 30px;
     z-index: 101; /* needs to sit under the dropdown nav on mobile/tablet */
-    transform: translateY(100%);
+    transform: translateY(50%);
     transition: transform 0.35s ease-out;
   }
   

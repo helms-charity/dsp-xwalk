@@ -91,6 +91,57 @@ function render(block) {
   contentWrap.append(contentInner);
 }
 
+/**
+ * Toggles the "isi-wrapper" div as a popup snackbar
+ */
+function toggleISIPopup() {
+  const isiWrapper = document.querySelector('.isi-wrapper');
+  if (!isiWrapper) {
+    console.error('Element with class "isi-wrapper" not found.');
+    return;
+  }
+
+  const isiBlock = document.querySelector('.isi');
+  if (!isiBlock) {
+    console.error('Element with class "isi" block not found.');
+    return;
+  }
+
+  let isExpanded = false;
+
+  const toggleHeight = () => {
+    isExpanded = !isExpanded;
+    isiWrapper.style.height = isExpanded ? 'calc(100% - 185px)' : '273px';
+    isiWrapper.classList.toggle('is-isi-visible', isExpanded);
+    isiBlock.classList.toggle('is-isi-visible', isExpanded);
+    toggleButton.innerText = isExpanded ? 'Collapse' : 'Expand';
+    toggleButton.style.top = isExpanded ? '10px' : '130px';
+  };
+
+  // Initial setup
+  isiWrapper.style.position = 'fixed';
+  isiWrapper.style.bottom = '0';
+  isiWrapper.style.left = '0';
+  isiWrapper.style.right = '0';
+  isiWrapper.style.height = '273px'; // Default to collapsed height
+  isiWrapper.style.transition = 'height 0.35s ease-out';
+  isiWrapper.style.zIndex = '101'; // Ensure it sits above other elements
+
+  // Add a toggle button
+  const toggleButton = document.createElement('button');
+  toggleButton.innerText = 'Expand';
+  toggleButton.style.position = 'absolute';
+  toggleButton.style.top = '130px';
+  toggleButton.style.right = '20px';
+  toggleButton.style.zIndex = '102';
+  toggleButton.addEventListener('click', toggleHeight);
+
+  isiWrapper.appendChild(toggleButton);
+}
+
+// Call the function to initialize the popup
+toggleISIPopup();
+
 export default function decorate(block) {
   const hook = document.querySelector(HOOK);
 
