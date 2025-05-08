@@ -32,13 +32,19 @@
   color: white;
 }
 
-.card-columms .green ul {
+.card-columns .green ul {
   list-style-type: none;
-  border: 2px solid red;
+  padding-left: 32px;
+  text-indent: -16px;
 }
 
-.card-columms .green li {
-
+.card-columns .green li::before {
+  content: url('/icons/search.svg');
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  margin-right: 4px;
+  height: 20px;
 }
 
 .card-columns .yellow {
